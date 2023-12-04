@@ -31,7 +31,7 @@ export const savePengaduan = async(req, res)=>{
     const isi_laporan = req.body.isi_laporan;
     const status = req.body.status;
     const foto = req.files.foto;
-    // const fileSize = foto.data.length;
+    const fileSize = foto.data.length;
     const ext = path.extname(foto.name);
     const fileName = foto.md5 + ext;
     const url = `${req.protocol}://${req.get("host")}/images/${fileName}`;

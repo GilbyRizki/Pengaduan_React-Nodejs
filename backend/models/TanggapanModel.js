@@ -7,7 +7,7 @@ import Petugas from "./PetugasModel.js";
 const {DataTypes} = Sequelize;
 
 const Tanggapan = db.define("tanggapan", {
-   
+    id_tanggapan: {type: DataTypes.INTEGER(11), primaryKey: true, autoIncrement: true},
     id_pengaduan: DataTypes.INTEGER(11),
     tgl_tanggapan: DataTypes.DATE(),
     tanggapan: DataTypes.TEXT(),

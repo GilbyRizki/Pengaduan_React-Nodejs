@@ -44,7 +44,7 @@ export const updateTanggapan = async(req, res)=>{
             id_tanggapan : req.params.id_tanggapan
         }
     })
-    if(!id_tanggapan) return res.status(404).json({msg: "No Data Found"});
+    if(!Tanggapan) return res.status(404).json({msg: "No Data Found"});
     const id_tanggapan = req.body.id_tanggapan;
     const id_pengaduan = req.body.id_pengaduan;
     const tgl_tanggapan = req.body.tgl_tanggapan;
@@ -52,7 +52,7 @@ export const updateTanggapan = async(req, res)=>{
     const id_petugas = req.body.id_petugas;
 
     try {
-        await Petugas.update({id_tanggapan:id_tanggapan, id_pengaduan:id_pengaduan, tgl_tanggapan, tgl_tanggapan, tanggapan:tanggapan, id_petugas:id_petugas},{
+        await Tanggapan.update({id_tanggapan:id_tanggapan, id_pengaduan:id_pengaduan, tgl_tanggapan, tgl_tanggapan, tanggapan:tanggapan, id_petugas:id_petugas},{
             where:{
                 id_tanggapan : req.params.id_tanggapan
             }
@@ -70,7 +70,7 @@ export const deleteTanggapan = async(req, res)=>{
             id_tanggapan : req.params.id_tanggapan
         }
     });
-    if(!id_tanggapan) return res.status(404).json({msg: "No Data Found"});
+    if(!Tanggapan) return res.status(404).json({msg: "No Data Found"});
 
     try {
         await Tanggapan.destroy({
