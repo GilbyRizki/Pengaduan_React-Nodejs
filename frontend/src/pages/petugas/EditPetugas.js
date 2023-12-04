@@ -100,14 +100,14 @@ const EditPetugas = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Petugas Telp</label>
+              <label className="label">Level</label>
               <div className="control">
                 <input
                   type="text"
                   className="input"
                   value={level}
                   onChange={(e) => setLevel(e.target.value)}
-                  placeholder="Petugas Telp"
+                  placeholder="Petugas, Admin"
                 />
               </div>
             </div>

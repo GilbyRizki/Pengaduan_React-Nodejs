@@ -38,12 +38,11 @@ const PetugasList = () => {
                 <div className="card-content">
                   <div className="media">
                     <div className="media-content">
-                      <p className="title is-4">{petugas.id_petugas}</p>
-                      <p className="title is-4">{petugas.nama_petugas}</p>
-                      <p className="title is-4">{petugas.username}</p>
-                      <p className="title is-4">{petugas.password}</p>
-                      <p className="title is-4">{petugas.telp}</p>
-                      <p className="title is-4">{petugas.level}</p>
+                      <p className="title is-4">Id Petugas :{petugas.id_petugas}</p>
+                      <p className="title is-4">Nama Petugas :{petugas.nama_petugas}</p>
+                      <p className="title is-4">Username :{petugas.username}</p>
+                      <p className="title is-4">Telp:{petugas.telp}</p>
+                      <p className="title is-4">Level :{petugas.level}</p>
                     </div>
                   </div>
                 </div>

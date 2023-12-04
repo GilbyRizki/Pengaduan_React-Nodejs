@@ -37,10 +37,10 @@ const MasyarakatList = () => {
                 <div className="card-content">
                   <div className="media">
                     <div className="media-content">
-                      <p className="title is-4">{masyarakat.nik}</p>
-                      <p className="title is-4">{masyarakat.nama}</p>
-                      <p className="title is-4">{masyarakat.username}</p>
-                      <p className="title is-4">{masyarakat.telp}</p>
+                      <p className="title is-4">Nik: {masyarakat.nik}</p>
+                      <p className="title is-4">Nama: {masyarakat.nama}</p>
+                      <p className="title is-4">username:{masyarakat.username}</p>
+                      <p className="title is-4">Telp :{masyarakat.telp}</p>
                     </div>
                   </div>
                 </div>

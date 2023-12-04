@@ -43,11 +43,11 @@ const PengaduanList = () => {
                 <div className="card-content">
                   <div className="media">
                     <div className="media-content">
-                      <p className="title is-4">{pengaduan.id_pengaduan}</p>
-                      <p className="title is-4">{pengaduan.nik}</p>
-                      <p className="title is-4">{pengaduan.isi_laporan}</p>
-                      <p className="title is-4">{pengaduan.status}</p>
-                      <p className="title is-4">{pengaduan.tgl_pengaduan}</p>
+                      <p className="title is-4">Id Pengaduan :{pengaduan.id_pengaduan}</p>
+                      <p className="title is-4">Nik Masyarakat :{pengaduan.nik}</p>
+                      <p className="title is-4">Isi Pengaduan :{pengaduan.isi_laporan}</p>
+                      <p className="title is-4">Status :{pengaduan.status}</p>
+                      <p className="title is-4">Tanggal  :{pengaduan.tgl_pengaduan}</p>
                     </div>
                   </div>
                 </div>

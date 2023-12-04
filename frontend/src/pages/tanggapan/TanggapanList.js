@@ -17,7 +17,7 @@ const TanggapanList = () => {
     setTanggapan(response.data);
   };
 
-  const deleteTanggapan = async (id_pengaduan) => {
+  const deleteTanggapan = async (id_tanggapan) => {
     try {
       await axios.delete(`http://localhost:5000/tanggapan/${id_tanggapan}`);
       getTanggapan();
@@ -38,11 +38,10 @@ const TanggapanList = () => {
                 <div className="card-content">
                   <div className="media">
                     <div className="media-content">
-                      <p className="title is-4">{tanggapan.id_tanggapan}</p>
-                      <p className="title is-4">{tanggapan.nik}</p>
-                      <p className="title is-4">{tanggapan.isi_laporan}</p>
-                      <p className="title is-4">{tanggapan.status}</p>
-                      <p className="title is-4">{tanggapan.tgl_tanggapan}</p>
+                      <p className="title is-4">Id Pengaduan: {tanggapan.id_pengaduan}</p>
+                      <p className="title is-4">Tanggapan :{tanggapan.tanggapan}</p>
+                      <p className="title is-4">Id Petugas :{tanggapan.id_petugas}</p>
+                      <p className="title is-4">Tangggal Tanggapan :{tanggapan.tgl_tanggapan}</p>
                     </div>
                   </div>
                 </div>

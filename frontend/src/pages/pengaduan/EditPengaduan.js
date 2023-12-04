@@ -13,7 +13,7 @@ const EditPengaduan = () => {
 
   useEffect(() => {
     getPengaduanById();
-  });
+  }, []);
 
   const getPengaduanById = async () => {
     const response = await axios.get(`http://localhost:5000/pengaduan/${id_pengaduan}`);
@@ -32,7 +32,7 @@ const EditPengaduan = () => {
     const formData = new FormData();
     formData.append("isi_laporan", isi_laporan);
     formData.append("status", status);
-    formData.append("file", file);
+    formData.append("foto", file);
     try {
       await axios.patch(`http://localhost:5000/pengaduan/${id_pengaduan}`, formData, {
         headers: {

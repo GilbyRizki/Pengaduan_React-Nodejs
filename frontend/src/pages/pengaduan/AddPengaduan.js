@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
@@ -12,6 +12,16 @@ const AddPengaduan = () => {
   const [status, setStatus] = useState("");
   const [preview, setPreview] = useState("");
   const navigate = useNavigate();
+  const [masyarakats, setMasyarakat] = useState([]);
+
+  useEffect(() => {
+    getMasyarakat();
+  }, []);
+
+  const getMasyarakat = async () => {
+    const response = await axios.get("http://localhost:5000/masyarakat");
+    setMasyarakat(response.data);
+  };
 
   const loadImage = (e) => {
     const image = e.target.files[0];
@@ -29,6 +39,7 @@ const AddPengaduan = () => {
     formData.append("status", status);
     formData.append("foto", file);
     try {
+      console.log(formData);
       await axios.post("http://localhost:5000/pengaduan", formData, {
         headers: {
           "Content-type": "multipart/form-data",
@@ -71,17 +82,17 @@ const AddPengaduan = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Nik</label>
-              <div className="control">
-                <input
-                  type="text"
-                  className="input"
-                  value={nik}
-                  onChange={(e) => setNik(e.target.value)}
-                  placeholder="Nik"
-                />
+              <label className="label">Nama Masyarakat</label>
+              <div class="select">
+                <select value={nik} onChange={(e) => setNik(e.target.value)}>
+                  <option>Select</option>
+                  {masyarakats.map((masyarakat) => (
+                    <option value={masyarakat.nik}>{masyarakat.nama}</option>
+                  ))}
+                </select>
               </div>
             </div>
+
             <div className="field">
               <label className="label">Isi Laporan</label>
               <div className="control">

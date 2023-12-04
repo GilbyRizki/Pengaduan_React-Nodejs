@@ -47,7 +47,7 @@ const AddPetugas = () => {
                   className="input"
                   value={id_petugas}
                   onChange={(e) => setId_petugas(e.target.value)}
-                  placeholder="Petugas Nik"
+                  placeholder="Id Petugas"
                 />
               </div>
             </div>
